@@ -162,10 +162,11 @@ each(names, function (item, indice) {
 */
 
 // Code here
-let getUserById = function (users, id, cb) {
-  for (find in users) {
-    if (users.id === id) {
-
+let getUserById = (objArr, id, cb) => {
+  for (let i = 0; i < objArr.length; i++) {
+    console.log(i)
+    if (objArr[i].id === id) {
+      cb(objArr[i])
     }
   }
 }
